@@ -15,10 +15,21 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Install dependencies and run linters
+      # Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16" # Use the version your project needs
+
+      # Install dependencies
       - name: Install dependencies
         run: npm install
 
+      # Install ESLint and Prettier globally (optional but recommended)
+      - name: Install ESLint and Prettier
+        run: npm install eslint prettier --save-dev
+
+      # Run lint and format
       - name: Lint and format
         run: npm run lint && npm run format
 
@@ -32,7 +43,7 @@ jobs:
       - name: Build Docker image
         run: |
           docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/taskreporter-backend:latest .
-      
+
       - name: Push Docker image
         run: |
           docker push ${{ secrets.DOCKER_HUB_USERNAME }}/taskreporter-backend:latest

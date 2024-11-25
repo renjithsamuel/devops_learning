@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 // const cors = require('cors');
 
@@ -13,14 +13,20 @@ const router = express.Router();
 //     }
 // }));
 
-const {getCategories,getUniqueCategoryById,getCategoriesByUserId,postCategory,patchCategoryById,deleteCategoryById} = require('../Controllers/CategoriesController');
+const {
+  getCategories,
+  getUniqueCategoryById,
+  getCategoriesByUserId,
+  postCategory,
+  patchCategoryById,
+  deleteCategoryById,
+} = require("../Controllers/CategoriesController");
 
-router.get('/getCategories',getCategories);
-router.get('/getUniqueCategoryById/:id',getUniqueCategoryById);
-router.get('/getCategoriesByUserId/:id',getCategoriesByUserId);
-router.post('/postCategory',postCategory);
-router.patch('/patchCategoryById/:id',patchCategoryById);
-router.delete('/deleteCategoryById/:id',deleteCategoryById);
-
+router.get("/getCategories", getCategories);
+router.get("/getUniqueCategoryById/:id", getUniqueCategoryById);
+router.get("/getCategoriesByUserId/:id", getCategoriesByUserId);
+router.post("/postCategory", postCategory);
+router.patch("/patchCategoryById/:id", patchCategoryById);
+router.delete("/deleteCategoryById/:id", deleteCategoryById);
 
 module.exports = router;

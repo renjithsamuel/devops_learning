@@ -1,4 +1,4 @@
 {
-    "DBNAME" : "TaskReporter_DBNAME",
-    "DBPASSWORD" : "TaskReporter_DBPASSWORD"
+  "DBNAME": "TaskReporter_DBNAME",
+  "DBPASSWORD": "TaskReporter_DBPASSWORD"
 }
