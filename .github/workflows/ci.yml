@@ -76,7 +76,7 @@ jobs:
         run: |
           set -e
 
-          IMAGE="renjithsamuel/taskreporter-backend:latest"
+          IMAGE="renjithsamuel/taskreporter_backend:latest"
           SERVICE_NAME="taskreporter_app"
           TIMEOUT=60
 
