@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: taskreporter_backend
+  labels:
+    app: taskreporter_backend
+spec:
+  containers:
+    - name: taskreporter-container
+      image: renjithsamuel/taskreporter_backend:latest
+      ports:
+        - containerPort: 80

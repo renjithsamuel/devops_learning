@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  app:
+    image: renjithsamuel/taskreporter_backend:latest
+    ports:
+      - "80:80"
+    environment:
+      - PORT=80
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
