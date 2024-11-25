@@ -8,6 +8,7 @@
     "lint": "eslint .",
     "format": "prettier --write ."
   },
+  "type": "module",
   "keywords": [
     "task",
     "reporting"
