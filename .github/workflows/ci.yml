@@ -67,6 +67,10 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+          
+      - name: Initialize Docker Swarm
+        run: |
+          docker swarm init || echo "Swarm already initialized"
 
       - name: Pull and Deploy Docker Service
         run: |
